@@ -1,24 +1,49 @@
 {
   "expo": {
-    "name": "1_frontend_expo",
-    "slug": "1_frontend_expo",
+    "name": "Psych.ai",
+    "slug": "psych-ai",
     "version": "1.0.0",
+    "scheme": "psychai",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "icon": "./assets/favicondark.png",
+    "userInterfaceStyle": "automatic",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.hananmumtaz.psychai",
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "Psych.ai requires Face ID to securely authenticate clinicians and unlock the HIPAA patient diagnostic vault.",
+        "NSCameraUsageDescription": "Psych.ai requires camera access to capture clinical session video for facial biomarker analysis.",
+        "NSMicrophoneUsageDescription": "Psych.ai requires microphone access to capture clinical audio for vocal acoustic analysis.",
+        "NSPhotoLibraryUsageDescription": "Psych.ai requires photo library access to upload patient session recordings."
+      }
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundColor": "#09090B",
+        "foregroundImage": "./assets/favicondark.png",
         "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
-      }
+        "monochromeImage": "./assets/favicondark.png"
+      },
+      "package": "com.hanan_mumtaz.Pysch.ai",
+      "permissions": [
+        "USE_BIOMETRIC",
+        "USE_FINGERPRINT"
+      ]
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicondark.png"
+    },
+    "plugins": [
+      "react-native-compressor",
+      "@react-native-community/datetimepicker",
+      "expo-web-browser",
+      "expo-sharing",
+      "expo-local-authentication"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "1a2f81c9-0db4-47ab-b40f-3a5c288b197a"
+      }
     }
   }
 }

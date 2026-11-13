@@ -17,6 +17,7 @@ expo-env.d.ts
 *.p12
 *.key
 *.mobileprovision
+*.keystore
 
 # Metro
 .metro-health-check*
@@ -28,10 +29,15 @@ yarn-error.*
 
 # macOS
 .DS_Store
+*.keystore
 *.pem
+Thumbs.db
+.vscode/
+.idea/
 
 # local env files
 .env*.local
+.env
 
 # typescript
 *.tsbuildinfo
